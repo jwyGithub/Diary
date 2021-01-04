@@ -1,0 +1,10 @@
+<!--index.wxml-->
+<view class="container">
+    <view>
+        今天是:{{ date }}
+    </view>
+    <view>
+        初始日期是:{{ firstRunTime }}
+    </view>
+    <view>{{ countDay }}</view>
+</view>
