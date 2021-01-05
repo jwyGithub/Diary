@@ -1,6 +1,6 @@
 export const getDate = (date, fmt) => {
   date = date || new Date();
-  fmt = fmt || 'yyyy-MM-dd hh:mm:ss';
+  fmt = fmt || 'yyyy-MM-dd';
   var o = {
     'M+': date.getMonth() + 1, //月份
     'd+': date.getDate(), //日
@@ -21,14 +21,11 @@ export const getDate = (date, fmt) => {
   return fmt;
 }
 
-export const msToTime = (duration) => {
-  let milliseconds = parseInt((duration % 1000) / 100);
-  let seconds = parseInt((duration / 1000) % 60);
-  let minutes = parseInt((duration / (1000 * 60)) % 60);
-  let hours = parseInt((duration / (1000 * 60 * 60)) % 24);
-  hours = (hours < 10) ? "0" + hours : hours;
-  minutes = (minutes < 10) ? "0" + minutes : minutes;
-  seconds = (seconds < 10) ? "0" + seconds : seconds;
-  return hours + "小时" + minutes + "分钟" + seconds + "秒" ;
+export const formatDuring = (mss) => {
+  var days = parseInt(mss / (1000 * 60 * 60 * 24));
+  var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = (mss % (1000 * 60)) / 1000;
+  return days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + parseInt(seconds) + " 秒 ";
 }
 

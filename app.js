@@ -6,10 +6,7 @@ App({
     // var logs = wx.getStorageSync('logs') || []
     // logs.unshift(Date.now())
     // wx.setStorageSync('logs', logs)
-    const firstRuntime = wx.getStorageSync('firstRunTime');
-    if (!firstRuntime) {
-      wx.setStorageSync('firstRunTime', getDate())
-    }
+    
     // 登录
     wx.login({
       success: res => {

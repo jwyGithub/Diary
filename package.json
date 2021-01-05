@@ -1,0 +1,23 @@
+{
+  "name": "myself",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jwyGithub/WechatMini.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jwyGithub/WechatMini/issues"
+  },
+  "homepage": "https://github.com/jwyGithub/WechatMini#readme",
+  "dependencies": {
+    "miniprogram-sm-crypto": "^0.2.1",
+    "weui-miniprogram": "^1.0.6"
+  }
+}

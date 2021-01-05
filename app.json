@@ -1,7 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/compontents/Toast/Toast"
+    "pages/compontents/Toast/Toast",
+    "pages/compontents/Modal/Modal"
   ],
   "window": {
     "backgroundTextStyle": "light",
