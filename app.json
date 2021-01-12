@@ -1,8 +1,11 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/compontents/Toast/Toast",
-    "pages/compontents/Modal/Modal"
+    "pages/my/my",
+    "pages/secretSafe/secretSafe",
+    "pages/addRecords/addRecords",
+    "pages/list/list",
+    "pages/home/home"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -10,6 +13,5 @@
     "navigationBarTitleText": "Autonomy",
     "navigationBarTextStyle": "black"
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json"
 }

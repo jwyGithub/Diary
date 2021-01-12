@@ -1,13 +1,23 @@
-<!--index.wxml-->
-<view class="container">
-    <view class="modal" wx:if="{{ isHaveFirstTime === true }}">
-        <Modal binddefine="define" />
-    </view>
-    <view wx:if="{{ isHaveFirstTime === false }}">
-        <mp-cells ext-class="my-cells" title="详情">
-            <mp-cell value="初始日期是:" footer="{{ firstRunTime }}"></mp-cell>
-            <mp-cell value="今天是:" footer="{{ date }}"></mp-cell>
-            <mp-cell value="已累计:" footer="{{ countDay }}"></mp-cell>
-        </mp-cells>
+<view class="index">
+    <van-toast id="van-toast" />
+    <van-action-sheet show="{{ show }}" title="请设置开始日期">
+        <van-datetime-picker type="datetime" value="{{ currentDate }}" formatter="{{ formatter }}"
+            bind:confirm="confirm" />
+    </van-action-sheet>
+    <view class="contanier">
+        <view class="content" style="height:calc(100% - {{tabbarHeight}})">
+            <view class="home" wx:if="{{ active === 0 && !show}}">
+                <Home show="{{ show }}" />
+            </view>
+            <view class="list" wx:if="{{ active === 1 && !show }}">
+                <List />
+            </view>
+            <view class="my" wx:if="{{ active === 2 && !show }}">
+                <My />
+            </view>
+        </view>
+        <view class="tabbar">
+            <Tabbar bind:changeActive="changeActive" active="{{active}}" />
+        </view>
     </view>
 </view>

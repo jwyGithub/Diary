@@ -1,5 +1,5 @@
 export const getDate = (date, fmt) => {
-  date = date || new Date();
+  date = new Date(date);
   fmt = fmt || 'yyyy-MM-dd';
   var o = {
     'M+': date.getMonth() + 1, //月份
@@ -26,6 +26,39 @@ export const formatDuring = (mss) => {
   var hours = parseInt((mss % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
   var minutes = parseInt((mss % (1000 * 60 * 60)) / (1000 * 60));
   var seconds = (mss % (1000 * 60)) / 1000;
-  return days + " 天 " + hours + " 小时 " + minutes + " 分钟 " + parseInt(seconds) + " 秒 ";
+  return {
+    all: days + " 天 " + hours + " 小时 " + minutes + " 分钟 ",
+    days,
+    hours,
+    minutes,
+    seconds
+  }
 }
 
+export const keepOneDecimal = (value) => {
+  if (/\./g.test(value)) {
+    return Number(value.toString().match(/^\d+(?:\.\d{0,2})?/));
+  } else {
+    return value;
+  }
+}
+
+export const getRecords = () => {
+  let records = wx.getStorageSync('records')
+  return records ? records : []
+}
+export const setRecords = ({
+  title,
+  msg,
+  time = new Date(),
+  success
+}) => {
+  let records = wx.getStorageSync('records') || []
+  records.push({
+    title,
+    msg,
+    time: getDate(time, 'yyyy-MM-dd hh:mm')
+  })
+  wx.setStorageSync('records', records)
+  success()
+}

@@ -1,0 +1,22 @@
+.my {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	background: #f5f6fa
+}
+
+.head-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: #fff;
+	margin-bottom: 10rpx;
+}
+
+.grid {
+	margin-bottom: 10rpx;
+}
+
+.btn {
+	margin-top: 10rpx;
+}

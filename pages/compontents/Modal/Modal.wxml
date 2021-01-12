@@ -1,7 +1,0 @@
-<view class="modal-content">
-  <text>请设置初始时间</text>
-  <input type="text" auto-focus   placeholder="格式yyyy-MM-dd"  bindinput="bindKeyInput" class="ipt"/>
-  <view class="btns">
-    <button class="mini-btn" type="primary" class="button" bindtap="define">确认</button>
-  </view>
-</view>

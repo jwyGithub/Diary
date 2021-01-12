@@ -1,9 +1,7 @@
-/**app.wxss**/
-@import 'miniprogram_npm/weui-miniprogram/weui-wxss/dist/style/weui.wxss';
-
-page{
+page {
   height: 100%;
   width: 100%;
-  position: relative;
+  font-family: -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Helvetica,
+    Segoe UI, Arial, Roboto, 'PingFang SC', 'miui', 'Hiragino Sans GB', 'Microsoft Yahei',
+    sans-serif;
 }
-

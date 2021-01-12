@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/jwyGithub/WechatMini#readme",
   "dependencies": {
-    "miniprogram-sm-crypto": "^0.2.1",
-    "weui-miniprogram": "^1.0.6"
+    "@vant/weapp": "^1.6.4"
   }
 }

@@ -1,72 +1,48 @@
-import { getDate, formatDuring } from "../../utils/util";
-const fs = wx.getFileSystemManager()
-//获取应用实例
-const app = getApp()
+import { formatter } from '../../utils/formatter'
+import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
+
 Page({
-  data: {
-    isHaveFirstTime: false,
-    date: "",
-    firstRunTime: "",
-    countDay: 0
-  },
-
-  onLoad: function () {
-    // console.log(wx.env.USER_DATA_PATH)
-    // fs.writeFileSync(`${wx.env.USER_DATA_PATH}/records.json`,{
-    //   "date": "2020-01-01"
-    // },'utf8')
-    // console.log(fs.readFileSync(`${wx.env.USER_DATA_PATH}/records.json`,'utf8'))
-    this.getFirstTime()
-    this.setData({
-      date: getDate()
-    })
-  },
-  getFirstTime() {
-    const firstRunTime = wx.getStorageSync('firstRunTime');
-    if (!firstRunTime) {
-      this.setData({
-        isHaveFirstTime: true
-      })
-    } else {
-      this.setData({
-        isHaveFirstTime: false
-      })
-      this.setData({
-        firstRunTime: firstRunTime
-      })
-      // 设置总共天数
-      setInterval(()=>{
-        this.countDayFn()
-      }, 1000);
-    }
-  },
-  countDayFn() {
-    const countDay = new Date().getTime() - new Date(this.data.firstRunTime).getTime()
-    this.setData({
-      countDay: formatDuring(countDay)
-    })
-  },
-  define(data) {
-    if (!data.detail) {
-      wx.showToast({
-        title: '请设置开始时间',
-        icon: 'none',
-        mask: true
-      })
-    } else {
-      this.setData({
-        firstRunTime: data.detail
-      })
-      wx.setStorageSync('firstRunTime', data.detail);
-      this.setData({
-        isHaveFirstTime: false
-      })
-      setInterval(()=>{
-        this.countDayFn()
-      }, 1000);
-    }
-  }
-
-
-
-})
+	data: {
+		active: '',
+		show: false,
+		tabbarHeight: '0px',
+		currentDate: new Date().getTime(),
+		formatter: formatter,
+		listShow: true
+	},
+	onLoad() {
+		// 判断是否存在初始日期
+		this.isExistStartTime();
+	},
+	isExistStartTime() {
+		const startTime = wx.getStorageSync('startTime');
+		if (!startTime) {
+			this.setData({
+				show: true
+			})
+		} else {
+			this.setData({
+				show: false
+			})
+			wx.createSelectorQuery().select('.tabbar').boundingClientRect().exec(res => {
+				this.setData({ tabbarHeight: res[0].height + 'px', active: 0 })
+			})
+		}
+	},
+	confirm(value) {
+		wx.setStorageSync('startTime', value.detail)
+		Toast.success({
+			type: 'success',
+			message: '设置成功',
+			onClose: () => {
+				this.setData({
+					show: false,
+					active: 0
+				})
+			},
+		});
+	},
+	changeActive(value) {
+		this.setData({ active: value.detail.detail })
+	}
+});
