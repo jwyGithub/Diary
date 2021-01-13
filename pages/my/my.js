@@ -1,4 +1,4 @@
-import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog';
+import Dialog from '../../miniprogram_npm/@vant/weapp/dialog/dialog'
 
 Component({
     data: {
@@ -12,18 +12,16 @@ Component({
         },
         reset() {
             Dialog.confirm({
-                    title: '警告',
-                    message: '重置将会清除所有内容，请慎重选择',
+                context: this, //代表的当前页面
+                selector: "#van-dialog", //选择器
+                title: '警告',
+                message: '重置会清除所有数据，请谨慎选择',
+            }).then(() => {
+                wx.clearStorageSync()
+                wx.navigateTo({
+                  url: 'index',
                 })
-                .then(() => {
-                    wx.clearStorageSync()
-                    wx.reLaunch({
-                        url: 'index'
-                    })
-                })
-                .catch(() => {
-
-                });
+            }).catch(() => {})
 
         }
     }

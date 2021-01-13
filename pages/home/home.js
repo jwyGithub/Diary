@@ -13,7 +13,7 @@ Component({
     },
     data: {
         value: 0,
-        count: 1,
+        count: 0,
         gradientColor: {
             '0%': '#ee0a24',
             '100%': '#ffd01e',
@@ -29,6 +29,12 @@ Component({
                 url: "/pages/addRecords/addRecords"
             },
             {
+                title: '添加今日事项',
+                type: "addToday",
+                img: "/pages/images/application/somthing.png",
+                url: "/pages/addToday/addToday"
+            },
+            {
                 title: '秘密保险柜',
                 type: "secretSafe",
                 img: "/pages/images/application/secret.png",
@@ -40,6 +46,7 @@ Component({
         attached() {
             this.calcValue()
             this.calcCountDay();
+            this.calcDangeCount()
             this.setData({
                 date: getDate(new Date(), 'yyyy-MM-dd hh:mm:ss'),
                 startTime: getDate(wx.getStorageSync('startTime'), 'yyyy-MM-dd hh:mm:ss')
@@ -78,6 +85,20 @@ Component({
                 countDay: formatDuring(new Date().getTime() - wx.getStorageSync('startTime')).all
             })
         },
-
+        // 计算危险次数
+        calcDangeCount() {
+            const dangeData = wx.getStorageSync('dangeData')
+            let count = 0
+            if (dangeData) {
+                dangeData.forEach(item => {
+                    if (item.type === 'Primitive') {
+                        count++
+                    }
+                })
+            }
+            this.setData({
+                count: count
+            })
+        }
     }
 })

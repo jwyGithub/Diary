@@ -1,3 +1,4 @@
+<van-dialog id="van-dialog" />
 <view class="my">
     <view class="head-img">
         <van-uploader bind:after-read="afterRead">
@@ -17,5 +18,5 @@
     <view class="btn">
         <van-button type="default" block round bind:click="reset">重置</van-button>
     </view>
-    <van-dialog id="van-dialog" />
+
 </view>

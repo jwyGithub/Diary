@@ -1,0 +1,17 @@
+<view>
+	<van-action-sheet show="{{ show }}" actions="{{ actions }}" cancel-text="取消" bind:select="selectAction"
+		bind:cancel="onCancel" />
+	<van-popup show="{{ showDate }}" bind:close="onClose" position="bottom" round>
+		<van-datetime-picker type="datetime" value="{{ currentDate }}" formatter="{{formatter}}"
+			bind:confirm="confirm" />
+	</van-popup>
+	<van-cell-group>
+		<van-cell title="类型" is-link value="{{initType}}" bind:click="selectType" />
+		<van-cell title="时间" is-link value="{{initDate}}" bind:click="selectDate" />
+	</van-cell-group>
+
+	<view style="margin-top:60rpx;padding:0 30rpx">
+		<van-button type="primary" size="small" round block bind:click="define">确认</van-button>
+	</view>
+	<van-toast id="van-toast" />
+</view>

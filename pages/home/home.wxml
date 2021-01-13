@@ -8,7 +8,7 @@
             <van-cell title="开始日期:" value="{{startTime}}" />
             <van-cell title="现在是:" value="{{ date }}" />
             <van-cell title="已保持:" value="{{ countDay }}" />
-            <van-cell title="已危险:" value="{{ count }}" />
+            <van-cell title="已危险:" value="{{ count }}次" />
         </van-cell-group>
     </view>
     <view class="application">

@@ -1,8 +1,9 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/my/my",
+    "pages/addToday/addToday",
     "pages/secretSafe/secretSafe",
+    "pages/my/my",
     "pages/addRecords/addRecords",
     "pages/list/list",
     "pages/home/home"
@@ -10,7 +11,7 @@
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "Autonomy",
+    "navigationBarTitleText": "自律",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json"
