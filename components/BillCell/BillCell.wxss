@@ -1,0 +1,11 @@
+._bill-cell{
+	display: flex;
+	align-items: center;
+	padding: 0 80rpx;
+	box-sizing: border-box;
+	height: 100rpx;
+	border-bottom: 1px solid #dfdfdf;
+}
+._money{
+	margin-left: auto;
+}

@@ -1,0 +1,3 @@
+<view>
+	<ActionSheet show="{{show}}" actions="{{groups}}"  bind:actiontap="actiontap" />
+</view>

@@ -1,0 +1,18 @@
+.course {
+	width: 100%;
+	height: 100%;
+	padding: 20rpx 0;
+	position: relative;
+	box-sizing: border-box;
+	overflow-y: auto;
+	background-color: #e4eaff;
+}
+
+.add {
+	width: 70rpx;
+	height: 70rpx;
+	position: fixed;
+	right: 3%;
+	z-index: 11;
+	bottom: 140rpx;
+}

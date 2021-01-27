@@ -1,0 +1,9 @@
+<view class="_bill-cell">
+	<image src="./images/{{icon}}.png" style="width:50rpx;height:50rpx"></image>
+	<view style="margin-left:50rpx">
+		<slot name="title"></slot>
+	</view>
+	<view class="_money">
+		<slot name="money"></slot>
+	</view>
+</view>

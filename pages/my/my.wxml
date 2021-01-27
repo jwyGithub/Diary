@@ -1,22 +1,4 @@
-<van-dialog id="van-dialog" />
-<view class="my">
-    <view class="head-img">
-        <van-uploader bind:after-read="afterRead">
-            <van-image round width="5rem" height="5rem" src="{{headImg}}" />
-        </van-uploader>
-    </view>
-    <view class="grid">
-        <van-grid column-num="2" gutter="{{ 6 }}">
-            <van-grid-item icon="photo-o" text="文字" wx:for="{{ 2 }}" wx:key="index" />
-        </van-grid>
-    </view>
-    <van-cell-group>
-        <van-cell title="单元格" icon="location-o" is-link />
-        <van-cell title="单元格" icon="location-o" is-link />
-        <van-cell title="设置" icon="setting-o" is-link />
-    </van-cell-group>
-    <view class="btn">
-        <van-button type="default" block round bind:click="reset">重置</van-button>
-    </view>
+<view>
+
 
 </view>

@@ -1,23 +1,15 @@
 .index {
-  width: 100%;
-  height: 100%;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
 }
 
-.contanier {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-.contanier .content{
-  overflow-y: auto;
-}
-.contanier .content .list{
-  height: 100%;
- 
-}
-.contanier .content .home{
-  height: 100%;
-}
-.contanier .content .my{
-  height: 100%;
+
+
+.index .tab {
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+
 }

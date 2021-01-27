@@ -1,0 +1,11 @@
+._button {
+	width: 88%;
+	font-size: .8rem;
+	margin: 20rpx auto;
+	background: #ffe300;
+	border: 1px solid #ffe300;
+	border-radius: 10px;
+	text-align: center;
+	line-height: 80rpx;
+	color: #444;
+}

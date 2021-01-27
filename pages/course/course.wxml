@@ -1,0 +1,4 @@
+<view class="course">
+	<DiaryCard bind:onClick="onClick" item="{{ item }}" wx:key="index" wx:for="{{ cardList }}" />
+	<image class="add" src="/static/images/course/add.png" bindtap="addCourse"></image>
+</view>

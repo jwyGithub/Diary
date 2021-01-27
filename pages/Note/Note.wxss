@@ -1,0 +1,21 @@
+.note{
+	width: 100%;
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+.note .bottom-content{
+	width: 100%;
+	overflow-x: auto;
+	margin: 20rpx 0;
+}
+.note .bottom{
+	padding: 20rpx 0;
+	overflow-x: auto;
+}
+.bottom .item{
+	float: left;
+	width: 750rpx;
+	height: 100%;
+
+}

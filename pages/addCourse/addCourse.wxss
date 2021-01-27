@@ -1,0 +1,68 @@
+.addcourse {
+	width: 100%;
+}
+
+.imgs {
+	display: flex;
+	flex-wrap: wrap;
+	width: 100%;
+	height: 500rpx;
+	background-color: #ededed;
+	position: relative;
+}
+
+.img {
+	width: calc(100% / 3);
+	height: 50%;
+}
+
+.add-btn {
+	width: 130rpx;
+	height: 130rpx;
+	background-color: #c0c0c0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.add-img {
+	width: 50rpx;
+	height: 50rpx;
+}
+
+.time {
+	text-align: center;
+	color: #000000;
+	line-height: 80rpx;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	padding: 20rpx 0;
+}
+
+.title-ipt {
+	text-align: center;
+	border-bottom: 1px solid #dedede;
+}
+
+.wether,
+.msg {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+
+._msg {
+	width: 88%;
+	border: 1px solid #dedede;
+	padding: 20rpx;
+	box-sizing: border-box;
+	margin-top: 20rpx;
+}

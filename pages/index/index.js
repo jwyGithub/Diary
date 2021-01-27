@@ -1,48 +1,109 @@
-import { formatter } from '../../utils/formatter'
-import Toast from '../../miniprogram_npm/@vant/weapp/toast/toast';
-
+// pages/index/index.js
 Page({
+
+	/**
+	 * 页面的初始数据
+	 */
 	data: {
-		active: '',
 		show: false,
-		tabbarHeight: '0px',
-		currentDate: new Date().getTime(),
-		formatter: formatter,
-		listShow: true
-	},
-	onLoad() {
-		// 判断是否存在初始日期
-		this.isExistStartTime();
-	},
-	isExistStartTime() {
-		const startTime = wx.getStorageSync('startTime');
-		if (!startTime) {
-			this.setData({
-				show: true
-			})
-		} else {
-			this.setData({
-				show: false
-			})
-			wx.createSelectorQuery().select('.tabbar').boundingClientRect().exec(res => {
-				this.setData({ tabbarHeight: res[0].height + 'px', active: 0 })
-			})
-		}
-	},
-	confirm(value) {
-		wx.setStorageSync('startTime', value.detail)
-		Toast.success({
-			type: 'success',
-			message: '设置成功',
-			onClose: () => {
-				this.setData({
-					show: false,
-					active: 0
-				})
+		tabHeight: "",
+		active: 2,
+		tabList: [{
+				index: 1,
+				image: "/static/images/tab/note.png",
+				activeImage: "/static/images/tab/note_active.png",
+				text: "日记"
 			},
-		});
+			{
+				index: 2,
+				image: "/static/images/tab/course.png",
+				activeImage: "/static/images/tab/course_active.png",
+				text: "历程"
+			},
+			{
+				index: 3,
+				image: "/static/images/tab/bill.png",
+				activeImage: "/static/images/tab/bill_active.png",
+				text: "账单"
+			},
+			{
+				index: 4,
+				image: "/static/images/tab/my.png",
+				activeImage: "/static/images/tab/my_active.png",
+				text: "我的"
+			},
+		]
 	},
-	changeActive(value) {
-		this.setData({ active: value.detail.detail })
+	changeTab(e) {
+		this.setData({
+			active: e.detail
+		})
+	},
+	showPopup() {
+		this.setData({
+			show: true
+		})
+	},
+	/**
+	 * 生命周期函数--监听页面加载
+	 */
+	onLoad: function (options) {
+		this.setData({
+			active: options.active ? parseInt(options.active) : 3
+		})
+	},
+
+	/**
+	 * 生命周期函数--监听页面初次渲染完成
+	 */
+	onReady: function () {
+		let query = wx.createSelectorQuery();
+		query.select('.tab').boundingClientRect(rect => {
+			this.setData({
+				tabHeight: rect.height + 'px'
+			})
+		}).exec();
+	},
+
+	/**
+	 * 生命周期函数--监听页面显示
+	 */
+	onShow: function () {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面隐藏
+	 */
+	onHide: function () {
+
+	},
+
+	/**
+	 * 生命周期函数--监听页面卸载
+	 */
+	onUnload: function () {
+
+	},
+
+	/**
+	 * 页面相关事件处理函数--监听用户下拉动作
+	 */
+	onPullDownRefresh: function () {
+
+	},
+
+	/**
+	 * 页面上拉触底事件的处理函数
+	 */
+	onReachBottom: function () {
+
+	},
+
+	/**
+	 * 用户点击右上角分享
+	 */
+	onShareAppMessage: function () {
+
 	}
-});
+})

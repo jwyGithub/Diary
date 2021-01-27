@@ -1,0 +1,7 @@
+<view class="_tab">
+	<view class="_tab-item" bindtap="changeTab" data-item="{{item}}" data-path="{{item.pagePath}}"
+		wx:for="{{ tabList }}" wx:key="index">
+		<image src="{{ item.index === active ? item.activeImage : item.image }}" class="_item-image"></image>
+		<view class="_item-text {{ item.index === active ? 'active' : '' }}">{{ item.text }}</view>
+	</view>
+</view>

@@ -1,0 +1,3 @@
+<view class="_button" bindtap="onClick">
+	<slot></slot>
+</view>

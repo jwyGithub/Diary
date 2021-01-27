@@ -1,12 +1,6 @@
 {
-  "usingComponents": {
-    "van-button": "@vant/weapp/button/index",
-    "van-image": "@vant/weapp/image/index",
-    "van-uploader": "@vant/weapp/uploader/index",
-    "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index",
-    "van-grid": "@vant/weapp/grid/index",
-    "van-grid-item": "@vant/weapp/grid-item/index",
-    "van-dialog": "@vant/weapp/dialog/index"
-  }
+	"component": true,
+	"usingComponents": {
+	
+	}
 }

@@ -1,0 +1,6 @@
+{
+	"component": true,
+	"usingComponents": {
+		"BillCell":"../../components/BillCell/BillCell"
+	}
+}

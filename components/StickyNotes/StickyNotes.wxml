@@ -1,0 +1,18 @@
+<view class="_sticky-note">
+	<view class="_left">
+		<view class="_day">{{ item.day }}</view>
+		<view class="_week">{{ item.week }}</view>
+		<view class="_time">{{ item.time }}</view>
+		<view class="_weather">
+			<image src="./images/{{item.wether}}.png" class="_img"></image>
+		</view>
+		<view class="_note">{{ item.title }}</view>
+	</view>
+	<view class="_right">
+		<view class="_imgs" wx:if="{{ item.type === 'img' }}" data-item="{{item}}" bindtap="chooseImg">
+			<image src="{{imgSrc}}" class="_img" wx:for="{{ item.mainImg }}" wx:key="index" wx:for-item="imgSrc">
+			</image>
+		</view>
+		<text wx:if="{{ item.type === 'text' }}">{{ item.text }}</text>
+	</view>
+</view>

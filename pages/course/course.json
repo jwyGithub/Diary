@@ -1,0 +1,7 @@
+{
+	"component": true,
+	"usingComponents": {
+		"StickyNote": "../../components/StickyNotes/StickyNotes",
+		"DiaryCard": "../../components/DiaryCard/DiaryCard"
+	}
+}

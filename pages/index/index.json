@@ -1,12 +1,9 @@
 {
   "usingComponents": {
-    "van-datetime-picker": "@vant/weapp/datetime-picker/index",
-    "van-toast": "@vant/weapp/toast/index",
-    "van-action-sheet": "@vant/weapp/action-sheet/index",
-    "van-transition": "@vant/weapp/transition/index",
-    "Tabbar": "/pages/components/TabBar/Tabbar",
-    "Home": "../home/home",
-    "List": "../list/list",
-    "My": "../my/my"
+    "Note": "../Note/Note",
+    "Course": "../course/course",
+    "My": "../My/My",
+    "Bill": "../bill/bill",
+    "Tab": "../../components/Tab/Tab"
   }
 }

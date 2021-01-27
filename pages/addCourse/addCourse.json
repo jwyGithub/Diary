@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "ActionSheet": "../../components/ActionSheet/ActionSheet",
+    "DButton":"../../components/Button/Button",
+    "Popup":"../../components/Popup/Popup",
+    "DateTimePicker":"../../components/DateTimePicker/DateTimePicker"
+
+  }
+}

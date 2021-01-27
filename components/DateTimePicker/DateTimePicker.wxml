@@ -1,0 +1,30 @@
+<Popup show="{{show}}" bind:dateSure="dateSure">
+	<view slot="content">
+		<view class="picker-view">
+			<view class="picker-view__pane">
+				<text catchtap="dateCancel">取消</text>
+				<text catchtap="dateSure">确定</text>
+			</view>
+			<picker-view class="pick-view__group" bindchange="dateChange" value="{{value}}">
+				<picker-view-column indicator-class="item_active">
+					<view wx:for="{{years}}" class="picker-item" wx:key="index">{{item}}年</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view wx:for="{{months}}" class="picker-item" wx:key="index">{{item}}月</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view wx:for="{{days}}" class="picker-item" wx:key="index">{{item}}日</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view wx:for="{{hours}}" class="picker-item" wx:key="index">{{item}}时</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view wx:for="{{minutes}}" class="picker-item" wx:key="index">{{item}}分</view>
+				</picker-view-column>
+				<picker-view-column>
+					<view wx:for="{{seconds}}" class="picker-item" wx:key="index">{{item}}秒</view>
+				</picker-view-column>
+			</picker-view>
+		</view>
+	</view>
+</Popup>

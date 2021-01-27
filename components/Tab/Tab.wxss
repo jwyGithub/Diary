@@ -1,0 +1,29 @@
+._tab {
+	display: flex;
+	padding: 10rpx 0;
+	box-shadow: 0px -1px 2px 0px #9E9E9E;
+	border-top-left-radius: 15rpx;
+	border-top-right-radius: 15rpx;
+	background: #fff;
+}
+
+._tab-item {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	flex: 1;
+}
+
+._tab-item ._item-image {
+	width: 18px;
+	height: 18px;
+	margin-bottom: 20rpx;
+}
+
+._tab-item ._item-text {
+	font-size: .7rem;
+}
+
+._tab-item .active {
+	color: #9258ff
+}

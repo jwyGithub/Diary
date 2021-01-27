@@ -1,0 +1,28 @@
+<view class="addcourse">
+	<view class="imgs">
+		<image src="{{item}}" wx:for="{{ imgs }}" wx:key="index" class="img" wx:if="{{imgs.length !== 0}}"></image>
+		<view class="add-btn" wx:if="{{ imgs.length === 0 }}" bindtap="addImgs">
+			<image src="./imgs/add-btn.png" class="add-img"></image>
+		</view>
+	</view>
+	<view class="time" bindtap="selectDate">
+		{{ time + ' ' + lunarday }}
+	</view>
+	<view class="title">
+		<input type="text" model:value="{{title}}" placeholder="请输入标题" class="title-ipt" bindinput="bindTitle" />
+	</view>
+	<view class="wether" bindtap="selectWether">
+		<image src="./imgs/{{defaultWether}}.png" style="width:70rpx;height:70rpx"></image>
+	</view>
+	<view class="msg">
+		<textarea placeholder="写下现在的内容" class="_msg" model:value="{{msg}}" bindinput="bindTitle"></textarea>
+	</view>
+	<view style="margin:20px 0;">
+		<DButton bind:onCviewck="onCviewck">确定</DButton>
+	</view>
+	<ActionSheet  show="{{showActionsheet}}" actions="{{groups}}">
+	</ActionSheet>
+
+	<DateTimePicker show="{{show}}" bind:dateSure="dateSure" />
+
+</view>

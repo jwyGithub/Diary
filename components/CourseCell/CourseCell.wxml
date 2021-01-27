@@ -1,0 +1,32 @@
+<view class="_progress">
+	<view class="_progress-item">
+		<view class="_item-date">2020-01-01</view>
+		<view class="_item-content">
+			<view class="_text"><text>1.</text>日记内容1</view>
+			<view class="_text"><text>1.</text>日记内容2</view>
+			<view class="_text"><text>1.</text>日记内容3</view>
+			<view class="_text"><text>1</text>日记内容4</view>
+			<view class="_text"><text>1</text>日记内容5</view>
+		</view>
+	</view>
+	<view class="_progress-item">
+		<view class="_item-date">2020-01-01</view>
+		<view class="_item-content">
+			<view class="_text"><text>1.</text>日记内容1</view>
+			<view class="_text"><text>1.</text>日记内容2</view>
+			<view class="_text"><text>1.</text>日记内容3</view>
+			<view class="_text"><text>1</text>日记内容4</view>
+			<view class="_text"><text>1</text>日记内容5</view>
+		</view>
+	</view>
+	<view class="_progress-item">
+		<view class="_item-date">2020-01-01</view>
+		<view class="_item-content">
+			<view class="_text"><text>1.</text>日记内容1</view>
+			<view class="_text"><text>1.</text>日记内容2</view>
+			<view class="_text"><text>1.</text>日记内容3</view>
+			<view class="_text"><text>1</text>日记内容4</view>
+			<view class="_text"><text>1</text>日记内容5</view>
+		</view>
+	</view>
+</view>

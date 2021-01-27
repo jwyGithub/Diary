@@ -1,0 +1,15 @@
+<view class="note">
+	<block>
+
+	</block>
+	<block>
+		<Calendar bind:changeDate="changeDate" />
+	</block>
+	<view class="bottom-content">
+		<view class="bottom" style="width:calc(750rpx * {{ noteList.length }})">
+			<view class="item" wx:for="{{ noteList }}" wx:key="index">
+				<!-- <StickyNote item="{{item}}" bind:chooseImg="chooseImg" /> -->
+			</view>
+		</view>
+	</view>
+</view>

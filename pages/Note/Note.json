@@ -1,0 +1,7 @@
+{
+	"component": true,
+	"usingComponents": {
+		"Calendar": "../../components/Calendar/Calendar",
+		"StickyNote": "../../components/StickyNotes/StickyNotes"
+	}
+}

@@ -1,0 +1,17 @@
+<view class="_card" bindtap="onClick">
+	<view class="_top">
+		<view class="_left">
+			<view class="main_text">{{ item.day }}</view>
+			<view class="mini_text">
+				<view>{{ item.week }}</view>
+				<view>{{ item.date }}</view>
+			</view>
+		</view>
+		<view class="_right">
+			<image src="../../pages/addCourse/imgs/{{ item.wether }}.png" style="width:80rpx;height:80rpx"></image>
+		</view>
+	</view>
+	<view class="_bottom">
+		{{item.title}}
+	</view>
+</view>
