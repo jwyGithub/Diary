@@ -18,9 +18,9 @@
 		<textarea placeholder="写下现在的内容" class="_msg" model:value="{{msg}}" bindinput="bindTitle"></textarea>
 	</view>
 	<view style="margin:20px 0;">
-		<DButton bind:onCviewck="onCviewck">确定</DButton>
+		<DButton bind:onClick="onClick">确定</DButton>
 	</view>
-	<ActionSheet  show="{{showActionsheet}}" actions="{{groups}}">
+	<ActionSheet  show="{{showActionsheet}}" actions="{{groups}}" bind:actiontap="actiontap">
 	</ActionSheet>
 
 	<DateTimePicker show="{{show}}" bind:dateSure="dateSure" />

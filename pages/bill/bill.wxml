@@ -1,25 +1,24 @@
 <view class="bill">
-	<view class="bill-title">
-		<text>2020年1月</text>
-		<image src="../../static/images/bill/bill.png" style="width:40rpx;height:40rpx;margin-left:10rpx"></image>
-	</view>
-	<view class="top">
-		<view class="sum">
-			<view style="line-height:100rpx">144.0</view>
-			<view class="sum-des">总花费</view>
-		</view>
-	</view>
-	<view style="padding:0 30rpx">
-		<BillCell icon="吃饭">
-			<view slot="title">晚餐</view>
-			<view slot="money">-3.00</view>
-		</BillCell>
-		<BillCell icon="京东">
-			<view slot="title">晚餐</view>
-			<view slot="money">-3.00</view>
-		</BillCell>
-	</view>
+    <view class="bill-title">
+        <text>2020年1月</text>
+        <image src="../../static/images/bill/bill.png" style="width: 40rpx; height: 40rpx; margin-left: 10rpx"></image>
+    </view>
+    <view class="top">
+        <view class="sum">
+            <view style="line-height: 100rpx">144.0</view>
+            <view class="sum-des">总花费</view>
+        </view>
+    </view>
+    <view style="padding: 0 30rpx">
+        <BillCell icon="吃饭">
+            <view slot="title">晚餐</view>
+            <view slot="money">-3.00</view>
+        </BillCell>
+        <BillCell icon="京东">
+            <view slot="title">晚餐</view>
+            <view slot="money">-3.00</view>
+        </BillCell>
+    </view>
 
-	<image class="add" src="/static/images/course/add.png" bindtap="addBill"></image>
-
+    <image class="add" src="/static/images/course/add.png" bindtap="addBill"></image>
 </view>
